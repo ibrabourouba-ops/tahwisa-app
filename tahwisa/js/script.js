@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('langFr')?.addEventListener('click', () => setLanguage('fr'));
   document.getElementById('langAr')?.addEventListener('click', () => setLanguage('ar'));
 
-  document.getElementById('enterOasisBtn')?.addEventListener('click', (e) => {
+    document.getElementById('enterOasisBtn')?.addEventListener('click', (e) => {
     e.preventDefault();
-    window.location.href = '../index.html';
+    window.location.href = '../home.html';
   });
 
   document.getElementById('loginFormEl')?.addEventListener('submit', handleLoginSubmit);
@@ -34,17 +34,17 @@ function setLanguage(lang) {
 function handleLoginSubmit(e) {
   e.preventDefault();
   const email = document.getElementById('loginEmail').value;
-  if (email) {
+    if (email) {
     alert('Welcome back! Redirecting...');
-    window.location.href = '../index.html';
+    window.location.href = '../home.html';
   }
 }
 
 function handleSignupSubmit(e) {
   e.preventDefault();
   const firstName = document.getElementById('firstName').value;
-  if (firstName) {
+    if (firstName) {
     alert('Account created! Entering the Oasis...');
-    window.location.href = '../index.html';
+    window.location.href = '../home.html';
   }
 }

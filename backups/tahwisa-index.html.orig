@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TAHWISA — Discover Algeria differently. Authentic travel with local hosts and unforgettable adventures." />
+  <title>TAHWISA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .language-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 15px;
+      border-radius: 50px;
+      backdrop-filter: blur(10px);
+    }
+    .lang-btn {
+      padding: 8px 12px;
+      background: transparent;
+      color: white;
+      border: 2px solid transparent;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .lang-btn:hover { border-color: #D9B67D; color: #D9B67D; }
+    .lang-btn.active { background: #D9B67D; color: #000; border-color: #D9B67D; }
+  </style>
+</head>
+<body>
+  <div class="language-switcher">
+    <button class="lang-btn active" data-lang="en" id="langEn">EN</button>
+    <button class="lang-btn" data-lang="fr" id="langFr">FR</button>
+    <button class="lang-btn" data-lang="ar" id="langAr">AR</button>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <div class="page page-home tahwisa-viewport is-active" id="pageHome" data-page="home">
+    <div class="cinematic-bg" id="cinematicBg" aria-hidden="true">
+      <div class="bg-photo-layer" id="bgPhotoLayer"></div>
+      <div class="sunset-gradient-overlay"></div>
+      <div class="dune-layer dune-1"></div>
+      <div class="dune-layer dune-2"></div>
+      <div class="dune-layer dune-3"></div>
+      <div class="sand-particles-container" id="sandParticles"></div>
+      <div class="cloud cloud-1"></div>
+      <div class="cloud cloud-2"></div>
+      <div class="cloud cloud-3"></div>
+      <div class="desert-vessel" id="desertVessel">
+        <img src="https://media.base44.com/images/public/6a411f90eda36fb29a101c80/c32632960_generated_1a4a6fe3.png" alt="" loading="lazy" />
+      </div>
+    </div>
+
+    <main class="tahwisa-main">
+      <section class="hero-side" aria-label="TAHWISA Hero">
+        <div class="hero-inner anim-fade-up">
+          <div class="logo-block" id="logoBlock">
+            <img src="https://media.base44.com/images/public/6a411f90eda36fb29a101c80/cf604bd6a_generated_90eb097f.png" alt="TAHWISA logo" class="logo-icon" width="52" height="52" />
+            <h1 class="brand-name" id="brandName">TAHWISA</h1>
+          </div>
+
+          <div class="auth-block anim-fade-up anim-delay-3">
+            <div class="auth-wrapper">
+              <div class="auth-form-inner" id="loginForm">
+                <h3 class="auth-title">Welcome Back</h3>
+                <form class="auth-fields" id="loginFormEl" novalidate>
+                  <div class="floating-input-group">
+                    <input type="email" id="loginEmail" name="email" required />
+                    <label for="loginEmail">Email Address</label>
+                    <span class="input-border-line"></span>
+                  </div>
+                  <div class="floating-input-group">
+                    <input type="password" id="loginPassword" name="password" required />
+                    <label for="loginPassword">Password</label>
+                    <span class="input-border-line"></span>
+                  </div>
+                  <button type="submit" class="ripple-btn btn-primary-auth" id="enterOasisBtn">Enter the Oasis</button>
+                </form>
+              </div>
+
+              <div class="auth-form-inner is-hidden" id="signupForm">
+                <h3 class="auth-title">Begin Your Journey</h3>
+                <form class="auth-fields" id="signupFormEl" novalidate>
+                  <div class="input-row">
+                    <div class="floating-input-group">
+                      <input type="text" id="firstName" name="firstName" required />
+                      <label for="firstName">First Name</label>
+                      <span class="input-border-line"></span>
+                    </div>
+                    <div class="floating-input-group">
+                      <input type="text" id="lastName" name="lastName" required />
+                      <label for="lastName">Last Name</label>
+                      <span class="input-border-line"></span>
+                    </div>
+                  </div>
+                  <div class="floating-input-group">
+                    <input type="email" id="signupEmail" name="email" required />
+                    <label for="signupEmail">Email Address</label>
+                    <span class="input-border-line"></span>
+                  </div>
+                  <div class="floating-input-group">
+                    <input type="password" id="signupPassword" name="password" required minlength="8" />
+                    <label for="signupPassword">Password</label>
+                    <span class="input-border-line"></span>
+                  </div>
+                  <div class="floating-input-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" required />
+                    <label for="confirmPassword">Confirm Password</label>
+                    <span class="input-border-line"></span>
+                  </div>
+                  <button type="submit" class="ripple-btn btn-primary-auth" id="joinBtn">Join TAHWISA</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
