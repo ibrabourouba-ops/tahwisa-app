@@ -1,0 +1,13 @@
+# Assets folder — images served from CDN (same as live site)
+
+Images used in this project are loaded from Base44 CDN URLs in index.html and script.js.
+
+To use local copies, download these into `assets/images/` and update paths:
+
+- `desert-bg.png` — hero background
+- `vessel.png` — desert sailing vessel
+- `logo.png` — TAHWISA compass logo
+- Experience card images (6 total)
+
+Logo: `assets/logo/`
+Icons: `assets/icons/` (SVG icons are inline in HTML)
